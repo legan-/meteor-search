@@ -1,11 +1,11 @@
-Items = new Mongo.Collection('items');
+Words = new Mongo.Collection('words');
 
-ItemsSchema = new SimpleSchema({
+WordsSchema = new SimpleSchema({
   'name': {
     type: String,
-    label: 'Item Name'
+    label: 'Word'
   },
-  'created': {
+  'createdAt': {
     type: Date,
     label: 'Date',
     denyUpdate: true,
@@ -18,4 +18,4 @@ ItemsSchema = new SimpleSchema({
   },
 });
 
-Items.attachSchema(ItemsSchema);
+Words.attachSchema(WordsSchema);

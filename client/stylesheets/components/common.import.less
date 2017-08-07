@@ -1,13 +1,6 @@
 @import '../base/mixins.import.less';
 @import '../base/variables.import.less';
 
-@background1: #3c3b52;
-@background2: #252233;
-@higher-scale: 1;
-@lower-scale: .9;
-@desktop: ~"only screen and (min-width: 768px)";
-@small: 	~"only screen and (max-width: 768px)";
-
 @footer-height: 33px;
 
 html {
@@ -24,7 +17,6 @@ footer {
 	left: 0;
 	position: absolute;
 	width: 100%;
-
 	p {
 		cursor: default;
 		font-size: 12px;
@@ -34,107 +26,70 @@ footer {
 	}
 }
 
-.background {	
-	.gradient(@background1, @background2);
-	height: 100%;
-	left: 0;
-	position: fixed;
-	top: 0;
-	width: 100%;
-}
-
-.bright-text {
-	color: #EEE;
-}
-
-@media @small {
-
-	.home-page-message {
-		height: 196px;
-		left: 25%;
-		min-width: 180px;
-		position: absolute;
-		top: 25%;
-		width: 50%;
-	}
-
-	.message-text {
-		font-size: 18px;
-	}
-
-	footer {
-		min-width: 180px;
+a {
+	&:hover {
+	  text-decoration: none;
 	}
 }
 
-@media @desktop {
-
-	.template-home {
-		left: 50%;
-		position: absolute;
-		top: 50%;
-	}
-
-	.home-page-message {
-		height: 196px;
-		margin-left: -192px;
-		margin-top: -98px;
-		width: 384px;
-	}	
-
-	.message-text {
-		font-size: 22px;
-	}
+.header-field {
+  font-size: 28px;
+  margin: 30px 0 60px;
+  text-align: center;
 }
 
-.home-page-message {
-	display: none;
-	margin-bottom: 34px;
-	padding: 20px 0;
-
-	p {
-		color: #EEE;
-	}
-
-	.logo-name {
-		cursor: pointer;
-	}
+@media (max-width: 768px) {
+  .header-field {
+    margin: 16px 0 60px;
+  }
+  .header-field-title {
+    height: auto;
+    font-size: 20px;
+    letter-spacing: 0;
+  } 
 }
 
-.not-found-message {
-	margin-top: 16%;
+.input-group.search {
+  width: 100%;
+  * {
+    cursor: pointer;
+    border-radius: 0;
+  }
+  .search-icon {
+    background-color: transparent;
+    border-color: transparent;
+    height: 50px;
+    padding: 8px 10px;
+    pointer-events: none;
+    position: absolute;
+    z-index: 3;
+    img {
+      height: 100%;
+    }
+  }
+  .search-field {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.4;
+    padding: 8px 10px;
+    text-align: center;
+  }
 }
 
-.logo-image {
-	margin: 0 auto;
-	width: 60px;
-
-	img {
-		width: 100%;
-	}
-	
+.status {
+  margin-bottom: 20px;
+  .lead {
+    margin: 0;
+  }
+  * {
+    vertical-align: middle;
+  }
 }
 
-.logo-name {
-	font-size: 30px;
-	font-weight: 400;
-	letter-spacing: 1px;
-	line-height: 1;
-	margin: 6px 0 0;
-	text-align: center;
-	text-transform: lowercase;
+.btn-container {
+  margin-bottom: 30px;
 }
 
-.message-text {
-	cursor: default;
-	font-weight: 300;
-	letter-spacing: .3px;
-	margin: 40px 0 30px;
-	text-align: center;
-}
-
-.keyframes(move, @lower-scale, @higher-scale);
-
-.transition {
-	.transition(.3s);
+.big {
+  font-size: 118%;
 }

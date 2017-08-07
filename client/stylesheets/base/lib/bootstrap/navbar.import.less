@@ -16,10 +16,6 @@
 
   // Prevent floats from breaking the navbar
   &:extend(.clearfix all);
-
-  @media (min-width: @grid-float-breakpoint) {
-    border-radius: @navbar-border-radius;
-  }
 }
 
 
@@ -181,6 +177,33 @@
     .navbar > .container &,
     .navbar > .container-fluid & {
       margin-left: -@navbar-padding-horizontal;
+    }
+  }
+}
+
+.navbar-user {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  a {
+    color: @navbar-default-brand-color;
+    display: block;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1.2;
+    text-transform: capitalize;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    &:hover,
+    &:focus {
+      color: @navbar-default-brand-hover-color;
+      background-color: @navbar-default-brand-hover-bg;
     }
   }
 }
