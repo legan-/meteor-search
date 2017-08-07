@@ -1,0 +1,103 @@
+// Bootstrap Mixins
+@import "./lib/bootstrap/mixins.import.less";
+
+// Custom Mixins
+.blur(@amount) {
+  -webkit-filter: blur(@amount);
+     -moz-filter: blur(@amount);
+       -o-filter: blur(@amount);
+      -ms-filter: blur(@amount);
+          filter: blur(@amount);
+}
+
+.transition(@amount) {
+	-webkit-transition: @amount ease-in;
+			 -o-transition: @amount ease-in;
+			    transition: @amount ease-in; 
+}
+
+.gradient(@color1, @color2) {
+	background: @color2;
+	background-image: -webkit-radial-gradient(top, circle cover, @color1 0%, @color2 80%);
+	background-image:    -moz-radial-gradient(top, circle cover, @color1 0%, @color2 80%);
+	background-image:      -o-radial-gradient(top, circle cover, @color1 0%, @color2 80%);
+	background-image:     -ms-radial-gradient(top, circle cover, @color1 0%, @color2 80%);
+	background-image:         radial-gradient(top, circle cover, @color1 0%, @color2 80%);
+}
+
+.animation(@name, @duration, @delay, @iteration) {
+	-webkit-animation: @name @duration @delay linear @iteration;
+		 -moz-animation: @name @duration @delay linear @iteration;
+		  -ms-animation: @name @duration @delay linear @iteration;
+					animation: @name @duration @delay linear @iteration;
+}
+
+.scale(@amount) {
+	-webkit-transform: scale(@amount);
+		 -moz-transform: scale(@amount);
+			 -o-transform: scale(@amount);
+			-ms-transform: scale(@amount);
+					transform: scale(@amount);
+}
+
+.keyframes(@name, @low, @high) {
+	@keyframes @name {
+		0% {
+			.scale(@high);
+		}
+		50% {
+			.scale(@low);
+		}
+		100% {
+			.scale(@high);
+		}
+	}
+
+	@-webkit-keyframes @name {
+		0% {
+			-webkit-transform: scale(@high);
+			transform: scale(@high);
+		}
+		50% {
+			-webkit-transform: scale(@low);
+			transform: scale(@low);
+		}
+		100% {
+			-webkit-transform: scale(@high);
+			transform: scale(@high);
+		}			
+	}
+
+	@-moz-keyframes @name {
+		0% {
+			-moz-transform: scale(@high);
+			transform: scale(@high);
+		}
+		50% {
+			-moz-transform: scale(@low);
+			transform: scale(@low);
+		}
+		100% {
+			-moz-transform: scale(@high);
+			transform: scale(@high);
+		}		
+	}
+
+	@-ms-keyframes @name {
+		0% {
+			-ms-transform: scale(@high);
+			transform: scale(@high);
+		}
+		50% {
+			-ms-transform: scale(@low);
+			transform: scale(@low);
+		}
+		100% {
+			-ms-transform: scale(@high);
+			transform: scale(@high);
+		}			
+	}
+
+
+}
+

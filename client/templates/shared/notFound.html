@@ -1,0 +1,16 @@
+<template name="notFound">
+  <div class="template-not-found">
+    <div class="container text-center not-found-message">
+
+      <div class="">Page is not Found</div>
+      <p class="message-text">
+        That page doesn't exist!
+      </p>
+      <a class="btn btn-primary" href="{{pathFor 'items'}}">
+      	Try Again
+      </a>
+    </div>
+  </div>
+
+  {{> _footer}}
+</template>

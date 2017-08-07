@@ -1,0 +1,140 @@
+@import '../base/mixins.import.less';
+@import '../base/variables.import.less';
+
+@background1: #3c3b52;
+@background2: #252233;
+@higher-scale: 1;
+@lower-scale: .9;
+@desktop: ~"only screen and (min-width: 768px)";
+@small: 	~"only screen and (max-width: 768px)";
+
+@footer-height: 33px;
+
+html {
+	min-height: 100%;
+	position: relative;
+}
+
+body {
+	margin: 0 0 @footer-height;
+}
+
+footer {
+	bottom: 0;
+	left: 0;
+	position: absolute;
+	width: 100%;
+
+	p {
+		cursor: default;
+		font-size: 12px;
+		font-weight: 300;
+		letter-spacing: .5px;
+		margin: 8px 0;
+	}
+}
+
+.background {	
+	.gradient(@background1, @background2);
+	height: 100%;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+.bright-text {
+	color: #EEE;
+}
+
+@media @small {
+
+	.home-page-message {
+		height: 196px;
+		left: 25%;
+		min-width: 180px;
+		position: absolute;
+		top: 25%;
+		width: 50%;
+	}
+
+	.message-text {
+		font-size: 18px;
+	}
+
+	footer {
+		min-width: 180px;
+	}
+}
+
+@media @desktop {
+
+	.template-home {
+		left: 50%;
+		position: absolute;
+		top: 50%;
+	}
+
+	.home-page-message {
+		height: 196px;
+		margin-left: -192px;
+		margin-top: -98px;
+		width: 384px;
+	}	
+
+	.message-text {
+		font-size: 22px;
+	}
+}
+
+.home-page-message {
+	display: none;
+	margin-bottom: 34px;
+	padding: 20px 0;
+
+	p {
+		color: #EEE;
+	}
+
+	.logo-name {
+		cursor: pointer;
+	}
+}
+
+.not-found-message {
+	margin-top: 16%;
+}
+
+.logo-image {
+	margin: 0 auto;
+	width: 60px;
+
+	img {
+		width: 100%;
+	}
+	
+}
+
+.logo-name {
+	font-size: 30px;
+	font-weight: 400;
+	letter-spacing: 1px;
+	line-height: 1;
+	margin: 6px 0 0;
+	text-align: center;
+	text-transform: lowercase;
+}
+
+.message-text {
+	cursor: default;
+	font-weight: 300;
+	letter-spacing: .3px;
+	margin: 40px 0 30px;
+	text-align: center;
+}
+
+.keyframes(move, @lower-scale, @higher-scale);
+
+.transition {
+	.transition(.3s);
+}

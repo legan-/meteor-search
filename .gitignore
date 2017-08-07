@@ -1,0 +1,4 @@
+/deploy/*
+/settings.json
+*.orig
+.DS_Store
