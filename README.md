@@ -4,8 +4,10 @@
 
 ## Instalation
 
-1. `$ git clone https://github.com/legan-/meteor-search.git`
+1. `curl https://install.meteor.com/ | sh`
 
-2. `$ cd meteor-search`
+2. `$ git clone https://github.com/legan-/meteor-search.git`
 
-3. `$ meteor`
+3. `$ cd meteor-search`
+
+4. `$ meteor`
