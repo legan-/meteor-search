@@ -10,7 +10,7 @@ WordsSchema = new SimpleSchema({
     label: 'Date',
     denyUpdate: true,
     optional: true,
-    autoValue: function () {
+    autoValue: () => {
       if (this.isInsert) {
         return new Date();
       }

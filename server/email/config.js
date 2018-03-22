@@ -1,4 +1,4 @@
-Meteor.startup(function() {
+Meteor.startup(() => {
 
   Meteor.Mailgun.config({
     username: 'postmaster@domain.com',
@@ -6,7 +6,7 @@ Meteor.startup(function() {
   });
 
   Meteor.methods({
-    'sendContactEmail': function(name, email, message) {
+    'sendContactEmail': (name, email, message) => {
       this.unblock();
 
       Meteor.Mailgun.send({

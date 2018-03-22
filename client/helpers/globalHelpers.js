@@ -1,3 +1,3 @@
-Template.registerHelper('username', function () {
+Template.registerHelper('username', () => {
 
 });
